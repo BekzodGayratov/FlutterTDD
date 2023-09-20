@@ -15,7 +15,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return BlocBuilder<UserBloc, UserState>(
       builder: (context, state) {
-        return Scaffold(body: Builder(builder: (context) {
+        return Scaffold(
+          appBar: AppBar(
+            title: const Text("Mello"),
+          ),
+          body: Builder(builder: (context) {
           if (state is UserLoadingState) {
             return const Center(
               child: CircularProgressIndicator.adaptive(),
