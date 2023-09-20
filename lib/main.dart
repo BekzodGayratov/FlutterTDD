@@ -6,10 +6,11 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:tdd/application/bloc/user_bloc.dart';
 import 'package:tdd/domain/db/user_db_service.dart';
 import 'package:tdd/presentation/auth/sign_up_page.dart';
+import 'package:tdd/presentation/home_page.dart';
 import 'package:tdd/presentation/todo_page.dart';
-import 'package:tdd/presentation/video_player_page.dart';
 
 void main() async {
+  //print("Hello");
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   UserDBService.registerAdapters();
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       builder: (context, child) {
         return MaterialApp(
-          home: TodoPage(),
+          home: HomePage(),
         );
       },
       designSize: const Size(375, 812),
