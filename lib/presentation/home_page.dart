@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            title: Text("Hello"),
+            title: const Text("Mello"),
           ),
           body: Builder(builder: (context) {
           if (state is UserLoadingState) {
